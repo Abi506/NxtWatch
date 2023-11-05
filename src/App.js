@@ -17,13 +17,19 @@ class App extends Component {
     isDarkMode: false,
   }
 
+  changeMode = () => {
+    this.setState(prevState => ({
+      isDarkMode: !prevState.isDarkMode,
+    }))
+  }
+
   render() {
     const {isDarkMode} = this.state
     return (
       <NxtWatchContext.Provider
         value={{
           isDarkMode,
-          changeMode: () => {},
+          changeMode: this.changeMode,
         }}
       >
         <Switch>

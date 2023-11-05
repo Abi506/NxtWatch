@@ -46,7 +46,6 @@ class LoginForm extends Component {
 
   submissionFailed = error => {
     this.setState({errorMessage: error, isLoginFailed: true})
-    console.log(error, 'here')
   }
 
   submissionSuccess = jwtToken => {
@@ -59,7 +58,7 @@ class LoginForm extends Component {
   submitEvent = async event => {
     event.preventDefault()
     const {username, password} = this.state
-    console.log(username, password)
+
     const userDetails = {username, password}
     const url = 'https://apis.ccbp.in/login'
     const options = {
@@ -67,9 +66,9 @@ class LoginForm extends Component {
       body: JSON.stringify(userDetails),
     }
     const response = await fetch(url, options)
-    console.log(response)
+
     const data = await response.json()
-    console.log(data)
+
     if (response.ok) {
       this.submissionSuccess(data.jwt_token)
     } else {
