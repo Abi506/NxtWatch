@@ -1,5 +1,6 @@
 import './index.css'
 import {Heading, Para} from './StyledComponent'
+
 import NxtWatchContext from '../../context/index'
 
 const SearchResultNotFound = () => (

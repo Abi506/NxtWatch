@@ -7,6 +7,7 @@ import {GiHamburgerMenu} from 'react-icons/gi'
 import {IoExitOutline, IoSunnyOutline} from 'react-icons/io5'
 
 import NxtWatchContext from '../../context/index'
+
 import Failed from '../FailedStatus'
 
 import './index.css'

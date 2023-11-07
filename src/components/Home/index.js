@@ -17,7 +17,9 @@ import VideoItem from '../VideoItem'
 import SearchResultNotFound from '../SearchNotFound/index'
 
 import NxtWatchContext from '../../context/index'
+
 import Fail from '../FailedStatus'
+
 import './index.css'
 
 import {
@@ -28,7 +30,7 @@ import {
   ContactDescription,
   ContentContainer,
   PremiumContainer,
-} from './StyledComponet'
+} from './StyledComponent'
 
 const apiStatus = {
   initialize: 'INITIALIZE',
@@ -69,6 +71,7 @@ class Home extends Component {
     videosList: [],
     searchInput: '',
     searchResultNotFound: false,
+
     DisplayPremium: true,
   }
 
@@ -126,10 +129,15 @@ class Home extends Component {
     this.setState({DisplayPremium: false})
   }
 
+  activeSection = id => {
+    this.setState({activeState: id})
+  }
+
   render() {
     const {
       searchInput,
       videosList,
+
       apistatus,
       DisplayPremium,
       searchResultNotFound,
@@ -194,6 +202,31 @@ class Home extends Component {
                       </div>
                     </div>
                   )}
+
+                  <div className="premium-container">
+                    <div className="close-button-container">
+                      <AiOutlineClose
+                        className="close-button"
+                        data-testid="close"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
+                        alt="nxt watch logo"
+                        className="website-premium-logo"
+                      />
+                    </div>
+                    <p className="premium-description">
+                      Buy Nxt Watch Premium prepaid plans with UPI
+                    </p>
+                    <div className="button-container">
+                      <button type="button" className="premium-button">
+                        GET IT NOW
+                      </button>
+                    </div>
+                  </div>
+
                   <div
                     className={
                       isDarkMode
@@ -231,6 +264,7 @@ class Home extends Component {
                       </div>
                     )}
                   {searchResultNotFound === true && <SearchResultNotFound />}
+
                   {apistatus === apiStatus.fail && <Fail />}
                 </div>
 
@@ -319,6 +353,7 @@ class Home extends Component {
                           </div>
                         </PremiumContainer>
                       )}
+
                       <div
                         className={
                           isDarkMode
@@ -358,6 +393,7 @@ class Home extends Component {
                       {searchResultNotFound === true && (
                         <SearchResultNotFound />
                       )}
+
                       {apistatus === apiStatus.fail && <Fail />}
                     </ContentContainer>
                   </HomeContainer>

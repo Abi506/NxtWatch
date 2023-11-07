@@ -19,6 +19,7 @@ import NxtWatchContext from './context/index'
 import './App.css'
 
 // Replace your code here
+
 const sections = [
   {
     font: <AiFillHome />,
@@ -50,6 +51,7 @@ class App extends Component {
   state = {
     dummyData: '',
     isDarkMode: false,
+
     activeState: sections[0].id,
   }
 
@@ -64,8 +66,9 @@ class App extends Component {
   }
 
   render() {
-    const {isDarkMode, activeState, changeState} = this.state
+    const {isDarkMode, activeState} = this.state
     console.log(activeState, 'activeState')
+
     return (
       <NxtWatchContext.Provider
         value={{

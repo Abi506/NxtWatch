@@ -50,6 +50,6 @@ export const PremiumContainer = styled.div`
   background-image: url('https://assets.ccbp.in/frontend/react-js/nxt-watch-banner-bg.png');
   background-size: cover;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   border-radius: 5px;
 `
