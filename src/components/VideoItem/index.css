@@ -56,6 +56,7 @@
   font-weight: 500;
   margin: 0px;
   margin-top: 10px;
+  color: black;
 }
 .video-title-dark {
   font-size: 15px;
@@ -76,6 +77,7 @@
 }
 .channel-name {
   margin-right: 5px;
+  color: #475569;
 }
 .channel-views-and-published-year {
   display: flex;
@@ -90,4 +92,5 @@
 .views-and-year {
   font-size: 15px;
   margin-left: 30px;
+  color: #475569;
 }

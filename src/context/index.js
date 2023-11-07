@@ -1,11 +1,6 @@
 import React from 'react'
 
-import {
-  AiOutlineClose,
-  AiOutlineSearch,
-  AiFillHome,
-  AiFillFire,
-} from 'react-icons/ai'
+import {AiFillHome, AiFillFire} from 'react-icons/ai'
 import {SiYoutubegaming} from 'react-icons/si'
 import {RiPlayListAddLine} from 'react-icons/ri'
 

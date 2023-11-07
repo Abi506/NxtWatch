@@ -1,12 +1,7 @@
 import {Component} from 'react'
 import {Route, Switch, Redirect} from 'react-router-dom'
 
-import {
-  AiOutlineClose,
-  AiOutlineSearch,
-  AiFillHome,
-  AiFillFire,
-} from 'react-icons/ai'
+import {AiFillHome, AiFillFire} from 'react-icons/ai'
 import {SiYoutubegaming} from 'react-icons/si'
 import {RiPlayListAddLine} from 'react-icons/ri'
 
@@ -15,7 +10,7 @@ import Home from './components/Home'
 
 import ProtectedRoute from './components/ProtectedRoute'
 import NxtWatchContext from './context/index'
-
+import VideoItemDetails from './components/VideoItemDetails'
 import './App.css'
 
 // Replace your code here
@@ -49,7 +44,6 @@ const sections = [
 
 class App extends Component {
   state = {
-    dummyData: '',
     isDarkMode: false,
 
     activeState: sections[0].id,
@@ -81,6 +75,11 @@ class App extends Component {
         <Switch>
           <Route exact path="/login" component={LoginForm} />
           <ProtectedRoute exact path="/" component={Home} />
+          <ProtectedRoute
+            exact
+            path="/videos/:id"
+            component={VideoItemDetails}
+          />
         </Switch>
       </NxtWatchContext.Provider>
     )

@@ -203,30 +203,6 @@ class Home extends Component {
                     </div>
                   )}
 
-                  <div className="premium-container">
-                    <div className="close-button-container">
-                      <AiOutlineClose
-                        className="close-button"
-                        data-testid="close"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
-                        alt="nxt watch logo"
-                        className="website-premium-logo"
-                      />
-                    </div>
-                    <p className="premium-description">
-                      Buy Nxt Watch Premium prepaid plans with UPI
-                    </p>
-                    <div className="button-container">
-                      <button type="button" className="premium-button">
-                        GET IT NOW
-                      </button>
-                    </div>
-                  </div>
-
                   <div
                     className={
                       isDarkMode
