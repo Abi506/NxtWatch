@@ -1,0 +1,27 @@
+.no-result-image {
+  width: 100%;
+}
+.no-result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.no-result-button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #00306e;
+  background-color: #00306e;
+  color: white;
+  cursor: pointer;
+}
+@media all and (min-width: 576px) {
+  .no-result-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .no-result-image {
+    width: 60%;
+  }
+}

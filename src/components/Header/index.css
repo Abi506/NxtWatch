@@ -1,0 +1,145 @@
+.nav-container-darkMode {
+  padding: 15px;
+  margin: 0px;
+  background-color: #000000;
+}
+@media all and (min-width: 576px) {
+  .nav-container-darkMode {
+    padding: 15px;
+    margin: 0px;
+    background-color: #000000;
+  }
+}
+.nav-container-lightMode {
+  padding: 15px;
+  margin: 0px;
+  background-color: #f1f5f9;
+}
+@media all and (min-width: 576px) {
+  .nav-container-lightMode {
+    padding: 15px;
+    margin: 0px;
+    background-color: #f1f5f9;
+  }
+}
+.nav-lists {
+  display: flex;
+  flex-direction: row;
+
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  justify-content: space-between;
+}
+
+.nav-link {
+  margin: 0px;
+  text-decoration: none;
+}
+
+.website-logo {
+  width: 100px;
+}
+@media all and (min-width: 576px) {
+  .website-logo {
+    width: 130px;
+  }
+}
+.nav-items-container {
+  display: flex;
+  align-self: center;
+}
+.nav-items-container-large {
+  display: none;
+}
+@media all and (min-width: 576px) {
+  .nav-items-container {
+    display: none;
+  }
+  .nav-items-container-large {
+    display: flex;
+    align-self: center;
+  }
+}
+
+.light-icons {
+  font-size: 20px;
+  align-self: center;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.dark-icons {
+  font-size: 22px;
+  align-self: center;
+  margin-right: 10px;
+  cursor: pointer;
+  color: white;
+}
+.light-icons-large {
+  display: none;
+}
+.dark-icons-large {
+  display: none;
+}
+@media all and (min-width: 576px) {
+  .light-icons {
+    display: none;
+  }
+  .dark-icons {
+    display: none;
+  }
+  .light-icons-large {
+    display: block;
+    font-size: 33px;
+    align-self: center;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .dark-icons-large {
+    display: block;
+    font-size: 30px;
+    align-self: center;
+    margin-right: 20px;
+    cursor: pointer;
+    color: white;
+  }
+  .profile-image {
+    width: 35px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  .logout-button {
+    padding: 7px;
+    border: 2px solid #3b82f6;
+    align-self: center;
+    margin-right: 20px;
+    border-radius: 5px;
+    background: transparent;
+    color: #3b82f6;
+    cursor: pointer;
+  }
+}
+.lightModeIcons {
+  font-size: 22px;
+  align-self: center;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.DarkModeIcons {
+  font-size: 22px;
+  align-self: center;
+  color: white;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.lightModeLightIcons {
+  font-size: 22px;
+  cursor: pointer;
+  align-self: center;
+}
+.darkModeExitIcons {
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+  align-self: center;
+}
