@@ -1,0 +1,21 @@
+.trending-lists {
+  list-style-type: none;
+  padding: 0px;
+}
+.each-list {
+  margin-bottom: 10px;
+}
+.thumbnail-image-case2 {
+  width: 100%;
+}
+@media all and (min-width: 576px) {
+  .each-list {
+    width: 900px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  .thumbnail-image-case2 {
+    width: 500px;
+  }
+}

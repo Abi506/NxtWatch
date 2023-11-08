@@ -36,6 +36,7 @@ const NxtWatchContext = React.createContext({
   changeMode: () => {},
   activeState: sections[0].id,
   changeState: () => {},
+  savedVideos: () => {},
 })
 
 export default NxtWatchContext

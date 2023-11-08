@@ -1,0 +1,32 @@
+.channel-container {
+  display: flex;
+  flex-direction: row;
+}
+.subscriber {
+  color: #475569;
+}
+@media all and (max-width: 576px) {
+  .video-container {
+  }
+}
+.like-container-and-views-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 100px;
+}
+.icon {
+  font-size: 20px;
+}
+.span-elements {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+
+  background: transparent;
+  border: none;
+}
+.save {
+  color: #3b82f6;
+}

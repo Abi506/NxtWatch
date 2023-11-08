@@ -11,6 +11,8 @@ import Home from './components/Home'
 import ProtectedRoute from './components/ProtectedRoute'
 import NxtWatchContext from './context/index'
 import VideoItemDetails from './components/VideoItemDetails'
+import Trending from './components/Trending'
+import Gaming from './components/Gaming'
 import './App.css'
 
 // Replace your code here
@@ -47,6 +49,7 @@ class App extends Component {
     isDarkMode: false,
 
     activeState: sections[0].id,
+    savedVideosList: [],
   }
 
   changeMode = () => {
@@ -59,10 +62,16 @@ class App extends Component {
     this.setState({activeState: id})
   }
 
-  render() {
-    const {isDarkMode, activeState} = this.state
-    console.log(activeState, 'activeState')
+  savedVideos = data => {
+    console.log(data, 'here')
+    this.setState(prevState => ({
+      savedVideosList: [...prevState.savedVideosList, data],
+    }))
+  }
 
+  render() {
+    const {isDarkMode, activeState, savedVideos, savedVideosList} = this.state
+    console.log(savedVideosList, 'lishdfbkdsfbjkdfsbkjdfsbkjsdbjksdfbjkdsfbkjb')
     return (
       <NxtWatchContext.Provider
         value={{
@@ -70,6 +79,7 @@ class App extends Component {
           changeMode: this.changeMode,
           activeState,
           changeState: this.changeActiveState,
+          savedVideos: this.savedVideos,
         }}
       >
         <Switch>
@@ -80,6 +90,8 @@ class App extends Component {
             path="/videos/:id"
             component={VideoItemDetails}
           />
+          <ProtectedRoute exact path="/trending" component={Trending} />
+          <ProtectedRoute exact path="/gaming" component={Gaming} />
         </Switch>
       </NxtWatchContext.Provider>
     )

@@ -1,0 +1,13 @@
+.trending-header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.fire-icon {
+  font-size: 50px;
+  color: #ff0000;
+  background-color: #cbd5e1;
+  border-radius: 30px;
+  padding: 10px;
+  margin-right: 10px;
+}
